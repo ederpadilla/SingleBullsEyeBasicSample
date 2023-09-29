@@ -48,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rin-GP-2qS">
                                 <rect key="frame" x="79" y="158.33333333333334" width="694" height="34.333333333333343"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Round"/>
                                 <connections>
                                     <action selector="didSelectHitMe:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HMb-iw-Tgc"/>
                                 </connections>
@@ -116,6 +116,7 @@
                     </view>
                     <connections>
                         <outlet property="slider" destination="QiV-3b-PJK" id="EP7-IQ-Sj6"/>
+                        <outlet property="targetValueLabel" destination="880-a8-LEk" id="Y0Y-9V-Ros"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

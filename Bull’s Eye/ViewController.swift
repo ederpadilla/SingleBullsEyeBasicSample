@@ -10,13 +10,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet var slider: UISlider!
+    @IBOutlet weak var targetValueLabel: UILabel!
     private var currentValue: Int = 50
     private var targetValue = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentValue = lroundf(slider.value)
+        startNewRound()
+    }
+    
+    private func startNewRound() {
         targetValue = Int.random(in: 1...100)
+        currentValue = 50
+        slider.value = Float(currentValue)
+        targetValueLabel.text = "Put the bulls eye as close as you can to: \(targetValue)"
     }
     
     @IBAction func didSelectHitMe(_ sender: Any) {
@@ -36,6 +43,7 @@ class ViewController: UIViewController {
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
+        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
