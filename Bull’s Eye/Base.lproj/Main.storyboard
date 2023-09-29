@@ -115,6 +115,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="roundLabel" destination="Lw3-5K-ZCG" id="A31-SF-1wz"/>
+                        <outlet property="scoreLabel" destination="IVA-Eo-HoY" id="Ogi-eT-VPr"/>
                         <outlet property="slider" destination="QiV-3b-PJK" id="EP7-IQ-Sj6"/>
                         <outlet property="targetValueLabel" destination="880-a8-LEk" id="Y0Y-9V-Ros"/>
                     </connections>
