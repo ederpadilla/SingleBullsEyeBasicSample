@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
     }
     
     private func startNewRound() {
@@ -41,45 +41,56 @@ class ViewController: UIViewController {
         abs(targetValue - currentValue)
     }
     
-    private func configureTitle(_ difference: Int) -> String {
+    private func configureTitle(_ difference: Int, score: inout Int) -> String {
         var title: String
         if difference == 0 {
-           title = "Perfect!"
-         } else if difference < 5 {
-           title = "You almost had it!"
-         } else if difference < 10 {
-           title = "Pretty good!"
-         } else {
-           title = "Not even close..."
-         }
+            title = "Perfect!"
+            score += 100
+        } else if difference < 5 {
+            title = "You almost had it!"
+            score += 50
+        } else if difference < 10 {
+            title = "Pretty good!"
+        } else {
+            title = "Not even close..."
+        }
         return title
+    }
+    
+    private func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
     }
     
     @IBAction func didSelectHitMe(_ sender: Any) {
         let difference = calculatePoints()
-        score += (100 - calculatePoints())
         let message = "The value of the slider is: \(currentValue)" +
         "\nThe target value is: \(targetValue)" +
         "\nYou scored: \(score)"
-        
+        let title = configureTitle(difference, score: &score)
+        score += (100 - calculatePoints())
         let alert = UIAlertController(
-            title: configureTitle(difference),
+            title: title,
             message: message,    // changed
             preferredStyle: .alert)
         
         let action = UIAlertAction(
-            title: "OK",          // changed
-            style: .default,
-            handler: nil)
+            title: "OK",
+            style: .default)
+        { _ in self.startNewRound() }
         
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
+    }
+    
+    @IBAction func startOver() {
+      startNewGame()
     }
     
 }
