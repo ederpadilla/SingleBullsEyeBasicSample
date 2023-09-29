@@ -114,6 +114,9 @@
                             <constraint firstItem="Lw3-5K-ZCG" firstAttribute="centerY" secondItem="G0d-Wt-bHX" secondAttribute="centerY" id="xZD-yB-ZFA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="slider" destination="QiV-3b-PJK" id="EP7-IQ-Sj6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
