@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private var currentValue: Int = 0
+    private var currentValue: Int = 50
     
     override func viewDidLoad() {
         super.viewDidLoad()
