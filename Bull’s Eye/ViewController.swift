@@ -8,29 +8,34 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    private var currentVaue: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
     
     @IBAction func didSelectHitMe(_ sender: Any) {
+        let message = "The value of the slider is: \(currentValue)"
+        
         let alert = UIAlertController(
             title: "Hello, World",
-            message: "This is my first app!",
+            message: message,    // changed
             preferredStyle: .alert)
         
         let action = UIAlertAction(
-            title: "Awesome",
+            title: "OK",          // changed
             style: .default,
             handler: nil)
         
         alert.addAction(action)
+        
         present(alert, animated: true, completion: nil)
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
-      print("The value of the slider is now: \(Int(slider.value))")
+        currentVaue = lroundf(slider.value)
     }
     
 }
