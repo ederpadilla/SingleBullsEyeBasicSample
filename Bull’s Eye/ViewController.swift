@@ -23,6 +23,10 @@ class ViewController: UIViewController {
         targetValue = Int.random(in: 1...100)
         currentValue = 50
         slider.value = Float(currentValue)
+        updateLabels()
+    }
+    
+    private func updateLabels() {
         targetValueLabel.text = "Put the bulls eye as close as you can to: \(targetValue)"
     }
     
