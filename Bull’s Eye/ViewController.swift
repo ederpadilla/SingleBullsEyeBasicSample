@@ -61,6 +61,12 @@ class ViewController: UIViewController {
         score = 0
         round = 0
         startNewRound()
+        let transition = CATransition()
+        transition.type = CATransitionType.fade
+        transition.duration = 1
+        transition.timingFunction =
+        CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeOut)
+        view.layer.add(transition, forKey: nil)
     }
     
     @IBAction func didSelectHitMe(_ sender: Any) {
@@ -90,7 +96,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func startOver() {
-      startNewGame()
+        startNewGame()
     }
     
     @IBAction func didSelectInfo(_ sender: Any) {
