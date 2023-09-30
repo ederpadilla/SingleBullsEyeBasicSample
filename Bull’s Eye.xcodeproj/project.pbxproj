@@ -13,6 +13,8 @@
 		E65234A42AC733D000583006 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65234A22AC733D000583006 /* Main.storyboard */; };
 		E65234A62AC733D300583006 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65234A52AC733D300583006 /* Assets.xcassets */; };
 		E65234A92AC733D300583006 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E65234A72AC733D300583006 /* LaunchScreen.storyboard */; };
+		E65234B22AC7AA8300583006 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65234B02AC7AA8300583006 /* InfoViewController.swift */; };
+		E65234B32AC7AA8300583006 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E65234B12AC7AA8300583006 /* InfoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E65234A52AC733D300583006 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E65234A82AC733D300583006 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E65234AA2AC733D300583006 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E65234B02AC7AA8300583006 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		E65234B12AC7AA8300583006 /* InfoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				E65234A52AC733D300583006 /* Assets.xcassets */,
 				E65234A72AC733D300583006 /* LaunchScreen.storyboard */,
 				E65234AA2AC733D300583006 /* Info.plist */,
+				E65234B02AC7AA8300583006 /* InfoViewController.swift */,
+				E65234B12AC7AA8300583006 /* InfoViewController.xib */,
 			);
 			path = "Bull’s Eye";
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			files = (
 				E65234A92AC733D300583006 /* LaunchScreen.storyboard in Resources */,
 				E65234A62AC733D300583006 /* Assets.xcassets in Resources */,
+				E65234B32AC7AA8300583006 /* InfoViewController.xib in Resources */,
 				E65234A42AC733D000583006 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,6 +147,7 @@
 			files = (
 				E65234A12AC733D000583006 /* ViewController.swift in Sources */,
 				E652349D2AC733D000583006 /* AppDelegate.swift in Sources */,
+				E65234B22AC7AA8300583006 /* InfoViewController.swift in Sources */,
 				E652349F2AC733D000583006 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

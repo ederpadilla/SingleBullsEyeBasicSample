@@ -93,5 +93,9 @@ class ViewController: UIViewController {
       startNewGame()
     }
     
+    @IBAction func didSelectInfo(_ sender: Any) {
+        let infoViewController = InfoViewController()
+        present(infoViewController, animated: true)
+    }
 }
 
